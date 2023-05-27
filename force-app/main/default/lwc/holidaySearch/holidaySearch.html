@@ -3,9 +3,11 @@
     
     <p>Welcome to the Holiday Search page. Enter your South Africa ID Number to check for important public holidays on your date of birth.</p>
     
-    <lightning-input type="text" label="ID Number" value={idNumber} onchange={handleIdNumberChange}></lightning-input>
+    <lightning-input type="text" label="ID Number" value={idNumber} onchange={handleIdNumberChange} pattern="[0-9]{13}" required></lightning-input>
     
-    <lightning-button label="Search" variant="brand" onclick={searchHolidays}></lightning-button>
+    <lightning-button label="Search" variant="brand" onclick={searchHolidays} disabled={isSearchDisabled}></lightning-button>
+    
+    <div class="error" if:true={isInvalidIdNumber}>Invalid ID Number. Please enter a valid South Africa ID Number.</div>
     
     <template if:true={holidays}>
         <div class="results">
@@ -17,6 +19,5 @@
             </ul>
         </div>
     </template>
-
 </template>
 
