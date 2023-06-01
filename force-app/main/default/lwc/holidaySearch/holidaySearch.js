@@ -92,7 +92,7 @@ export default class HolidaySearch extends LightningElement {
         return (10 - (sum % 10)) % 10;
     }
 
-        getPersonDetails(year, month, day, gender, citizenship) {
+    getPersonDetails(year, month, day, gender, citizenship) {
         let birthYear;
       
         const currentYear = new Date().getFullYear() % 100; // Get the last two digits of the current year
@@ -103,11 +103,13 @@ export default class HolidaySearch extends LightningElement {
           birthYear = 1900 + parseInt(year);
         }
       
+        const birthDate = new Date(`${birthYear}-${month}-${day}`);
+      
         return {
-          birthDate: new Date(`${birthYear}-${month}-${day}`),
+          birthDate,
           gender,
           citizenship
         };
       }
-      //user story
+    
     }
