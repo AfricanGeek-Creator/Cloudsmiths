@@ -1,0 +1,55 @@
+/* Green and Gold Styles */
+:host {
+    display: block;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: black; /* Dark Green */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+p {
+    color: black; /* Dark Green */
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+lightning-input {
+    --sds-c-input-border-color: #FFD700; /* Gold */
+    --sds-c-input-hover-border-color: #FFD700; /* Gold */
+}
+
+lightning-button.variant-brand {
+    background-color: #006400; /* Dark Green */
+    border-color: #006400; /* Dark Green */
+}
+
+.lightning-button.variant-brand:hover {
+    background-color: #228B22; /* Forest Green */
+    border-color: #228B22; /* Forest Green */
+}
+
+.results {
+    margin-top: 16px;
+}
+
+h2 {
+    color: #006400; /* Dark Green */
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 24px;
+}
+
+li {
+    color: #006400; /* Dark Green */
+    font-size: 14px;
+    margin-bottom: 4px;
+}
